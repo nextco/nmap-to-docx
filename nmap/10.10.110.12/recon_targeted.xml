@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Tue Jan 24 22:52:09 2023 as: nmap -p80,443,49443 -sTCV -n -oA 10.10.110.12/recon_targeted 10.10.110.12 -->
+<nmaprun scanner="nmap" args="nmap -p80,443,49443 -sTCV -n -oA 10.10.110.12/recon_targeted 10.10.110.12" start="1674618729" startstr="Tue Jan 24 22:52:09 2023" version="7.93" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="3" services="80,443,49443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.110.12" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1674618730" endtime="1674618755"><status state="up" reason="syn-ack" reason_ttl="125"/>
+<address addr="10.10.110.12" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49443"><state state="open" reason="syn-ack" reason_ttl="0"/></port>
+</ports>
+<times srtt="126738" rttvar="53717" to="341606"/>
+</host>
+<runstats><finished time="1674618755" timestr="Tue Jan 24 22:52:35 2023" summary="Nmap done at Tue Jan 24 22:52:35 2023; 1 IP address (1 host up) scanned in 26.04 seconds" elapsed="26.04" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

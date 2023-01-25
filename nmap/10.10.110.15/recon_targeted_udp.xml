@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Tue Jan 24 23:00:26 2023 as: nmap -p3391 -sUCV -n -oA 10.10.110.15/recon_targeted_udp 10.10.110.15 -->
+<nmaprun scanner="nmap" args="nmap -p3391 -sUCV -n -oA 10.10.110.15/recon_targeted_udp 10.10.110.15" start="1674619226" startstr="Tue Jan 24 23:00:26 2023" version="7.93" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="1" services="3391"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.110.15" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1674619227" endtime="1674619340"><status state="up" reason="syn-ack" reason_ttl="125"/>
+<address addr="10.10.110.15" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="3391"><state state="open" reason="udp-response" reason_ttl="125"/><service name="savant" method="table" conf="3"/></port>
+</ports>
+<times srtt="127485" rttvar="95765" to="510545"/>
+</host>
+<runstats><finished time="1674619340" timestr="Tue Jan 24 23:02:20 2023" summary="Nmap done at Tue Jan 24 23:02:20 2023; 1 IP address (1 host up) scanned in 113.87 seconds" elapsed="113.87" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

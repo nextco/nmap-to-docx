@@ -1,0 +1,29 @@
+# Nmap 7.93 scan initiated Tue Jan 24 22:57:48 2023 as: nmap -p80,443 -sTCV -n -oA 10.10.110.15/recon_targeted 10.10.110.15
+Nmap scan report for 10.10.110.15
+Host is up (0.13s latency).
+
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     Microsoft IIS httpd 10.0
+|_http-server-header: Microsoft-IIS/10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: IIS Windows Server
+443/tcp open  ssl/http Microsoft IIS httpd 10.0
+| ssl-cert: Subject: commonName=cygw.cyber.local
+| Subject Alternative Name: DNS:gateway.cyber.local
+| Not valid before: 2020-06-03T03:39:02
+|_Not valid after:  2022-06-03T03:39:02
+|_http-server-header: Microsoft-IIS/10.0
+| tls-alpn: 
+|_  http/1.1
+|_ssl-date: 2023-01-25T03:58:14+00:00; +7s from scanner time.
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: IIS Windows Server
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 6s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jan 24 22:58:08 2023 -- 1 IP address (1 host up) scanned in 20.16 seconds

@@ -1,0 +1,17 @@
+# Nmap 7.93 scan initiated Tue Jan 24 22:40:55 2023 as: nmap -p80 -sTCV -n -oA 10.10.110.10/recon_targeted 10.10.110.10
+Nmap scan report for 10.10.110.10
+Host is up (0.13s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Microsoft IIS httpd 10.0
+| http-robots.txt: 30 disallowed entries (15 shown)
+| /admin/ /App_Browsers/ /App_Code/ /App_Data/ 
+| /App_GlobalResources/ /bin/ /Components/ /Config/ /contest/ /controls/ 
+|_/DesktopModules/ /Documentation/ /HttpModules/ /images/ /Install/
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: Home
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jan 24 22:41:08 2023 -- 1 IP address (1 host up) scanned in 13.05 seconds

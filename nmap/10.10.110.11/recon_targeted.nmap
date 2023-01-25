@@ -1,0 +1,29 @@
+# Nmap 7.93 scan initiated Tue Jan 24 22:47:00 2023 as: nmap -p80,443 -sTCV -n -oA 10.10.110.11/recon_targeted 10.10.110.11
+Nmap scan report for 10.10.110.11
+Host is up (0.13s latency).
+
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     Microsoft IIS httpd 10.0
+|_http-title: IIS Windows Server
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+443/tcp open  ssl/http Microsoft IIS httpd 10.0
+| ssl-cert: Subject: commonName=certenroll.cyber.local
+| Not valid before: 2022-01-04T16:12:44
+|_Not valid after:  2024-01-04T16:12:44
+| http-methods: 
+|_  Potentially risky methods: TRACE
+| tls-alpn: 
+|   h2
+|_  http/1.1
+|_http-server-header: Microsoft-IIS/10.0
+|_ssl-date: 2023-01-25T03:47:30+00:00; +8s from scanner time.
+|_http-title: IIS Windows Server
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 7s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jan 24 22:47:23 2023 -- 1 IP address (1 host up) scanned in 23.55 seconds

@@ -1,0 +1,99 @@
+# Nmap 7.93 scan initiated Tue Jan 24 23:04:58 2023 as: nmap -p80 -sTCV -n -oA 10.10.110.250/recon_targeted 10.10.110.250
+Nmap scan report for 10.10.110.250
+Host is up (0.13s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    OPNsense
+|_http-trane-info: Problem with XML parsing of /evox/about
+|_http-server-header: OPNsense
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' 'unsafe-eval';
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Referrer-Policy: same-origin
+|     Set-Cookie: PHPSESSID=de8ae4b3722af85817dc72433726c66d; path=/
+|     Set-Cookie: PHPSESSID=de8ae4b3722af85817dc72433726c66d; path=/; HttpOnly
+|     Expires: Thu, 19 Nov 1981 08:52:00 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Pragma: no-cache
+|     Content-type: text/html; charset=UTF-8
+|     Content-Length: 1798
+|     Connection: close
+|     Date: Wed, 25 Jan 2023 04:05:11 GMT
+|     Server: OPNsense
+|     <!doctype html>
+|     <!--[if IE 8 ]><html lang="en" class="ie ie8 lte9 lte8 no-js"><![endif]-->
+|     <!--[if IE 9 ]><html lang="en" class="ie ie9 lte9 no-js"><![endif]-->
+|     <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![e
+|   HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     Set-Cookie: PHPSESSID=a8f34873e62af25a59c1306a2ccb7779; path=/
+|     Set-Cookie: PHPSESSID=a8f34873e62af25a59c1306a2ccb7779; path=/; HttpOnly
+|     Expires: Thu, 19 Nov 1981 08:52:00 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Pragma: no-cache
+|     Content-type: text/html; charset=UTF-8
+|     Content-Length: 563
+|     Connection: close
+|     Date: Wed, 25 Jan 2023 04:05:12 GMT
+|     Server: OPNsense
+|     <html><head><title>CSRF check failed</title>
+|     <script>
+|     document ).ready(function() {
+|     $.ajaxSetup({
+|     'beforeSend': function(xhr) {
+|     xhr.setRequestHeader("X-CSRFToken", "enNEWHZ5ekhKREp5V0UxL1dtT2FPZz09" );
+|     </script>
+|     </head>
+|     <body>
+|_    <p>CSRF check failed. Your form session may have expired, o
+|_http-title: Login
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.93%I=7%D=1/24%Time=63D0AA71%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,9A5,"HTTP/1\.0\x20200\x20OK\r\nContent-Security-Policy:\x20defau
+SF:lt-src\x20'self';\x20script-src\x20'self'\x20'unsafe-inline'\x20'unsafe
+SF:-eval';\x20style-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval';\r\n
+SF:X-Frame-Options:\x20SAMEORIGIN\r\nX-Content-Type-Options:\x20nosniff\r\
+SF:nX-XSS-Protection:\x201;\x20mode=block\r\nReferrer-Policy:\x20same-orig
+SF:in\r\nSet-Cookie:\x20PHPSESSID=de8ae4b3722af85817dc72433726c66d;\x20pat
+SF:h=/\r\nSet-Cookie:\x20PHPSESSID=de8ae4b3722af85817dc72433726c66d;\x20pa
+SF:th=/;\x20HttpOnly\r\nExpires:\x20Thu,\x2019\x20Nov\x201981\x2008:52:00\
+SF:x20GMT\r\nCache-Control:\x20no-store,\x20no-cache,\x20must-revalidate\r
+SF:\nPragma:\x20no-cache\r\nContent-type:\x20text/html;\x20charset=UTF-8\r
+SF:\nContent-Length:\x201798\r\nConnection:\x20close\r\nDate:\x20Wed,\x202
+SF:5\x20Jan\x202023\x2004:05:11\x20GMT\r\nServer:\x20OPNsense\r\n\r\n<!doc
+SF:type\x20html>\n<!--\[if\x20IE\x208\x20\]><html\x20lang=\"en\"\x20class=
+SF:\"ie\x20ie8\x20lte9\x20lte8\x20no-js\"><!\[endif\]-->\n<!--\[if\x20IE\x
+SF:209\x20\]><html\x20lang=\"en\"\x20class=\"ie\x20ie9\x20lte9\x20no-js\">
+SF:<!\[endif\]-->\n<!--\[if\x20\(gt\x20IE\x209\)\|!\(IE\)\]><!--><html\x20
+SF:lang=\"en\"\x20class=\"no-js\"><!--<!\[e")%r(HTTPOptions,3CC,"HTTP/1\.0
+SF:\x20403\x20Forbidden\r\nSet-Cookie:\x20PHPSESSID=a8f34873e62af25a59c130
+SF:6a2ccb7779;\x20path=/\r\nSet-Cookie:\x20PHPSESSID=a8f34873e62af25a59c13
+SF:06a2ccb7779;\x20path=/;\x20HttpOnly\r\nExpires:\x20Thu,\x2019\x20Nov\x2
+SF:01981\x2008:52:00\x20GMT\r\nCache-Control:\x20no-store,\x20no-cache,\x2
+SF:0must-revalidate\r\nPragma:\x20no-cache\r\nContent-type:\x20text/html;\
+SF:x20charset=UTF-8\r\nContent-Length:\x20563\r\nConnection:\x20close\r\nD
+SF:ate:\x20Wed,\x2025\x20Jan\x202023\x2004:05:12\x20GMT\r\nServer:\x20OPNs
+SF:ense\r\n\r\n<html><head><title>CSRF\x20check\x20failed</title>\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<script>\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\$\(\x20document\x20\)\.ready\(func
+SF:tion\(\)\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\$\.ajaxSetup\({\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20'beforeSend':\x20function\(xhr\)\x20
+SF:{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20xhr\.setRequestHeader\(\"X-CSRFToken\",\x20\"enNEWH
+SF:Z5ekhKREp5V0UxL1dtT2FPZz09\"\x20\);\n\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20}\);\n\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20}\);\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20</script>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</he
+SF:ad>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20<body>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20<p>CSRF\x20check\x20failed\.\x20Your\x20form\x20session\
+SF:x20may\x20have\x20expired,\x20o");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jan 24 23:07:26 2023 -- 1 IP address (1 host up) scanned in 148.16 seconds

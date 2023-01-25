@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Tue Jan 24 22:40:55 2023 as: nmap -p80 -sTCV -n -oA 10.10.110.10/recon_targeted 10.10.110.10 -->
+<nmaprun scanner="nmap" args="nmap -p80 -sTCV -n -oA 10.10.110.10/recon_targeted 10.10.110.10" start="1674618055" startstr="Tue Jan 24 22:40:55 2023" version="7.93" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="80"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.110.10" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1674618056" endtime="1674618068"><status state="up" reason="reset" reason_ttl="125"/>
+<address addr="10.10.110.10" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_services:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-robots.txt" output="30 disallowed entries (15 shown)&#xa;/admin/ /App_Browsers/ /App_Code/ /App_Data/ &#xa;/App_GlobalResources/ /bin/ /Components/ /Config/ /contest/ /controls/ &#xa;/DesktopModules/ /Documentation/ /HttpModules/ /images/ /Install/"/><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-title" output="Home"><elem key="title">&#xd;&#xa;&#x9;Home&#xd;&#xa;</elem>
+</script></port>
+</ports>
+<times srtt="125932" rttvar="94553" to="504144"/>
+</host>
+<runstats><finished time="1674618068" timestr="Tue Jan 24 22:41:08 2023" summary="Nmap done at Tue Jan 24 22:41:08 2023; 1 IP address (1 host up) scanned in 13.05 seconds" elapsed="13.05" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Tue Jan 24 22:47:00 2023 as: nmap -p80,443 -sTCV -n -oA 10.10.110.11/recon_targeted 10.10.110.11 -->
+<nmaprun scanner="nmap" args="nmap -p80,443 -sTCV -n -oA 10.10.110.11/recon_targeted 10.10.110.11" start="1674618420" startstr="Tue Jan 24 22:47:00 2023" version="7.93" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.110.11" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1674618420" endtime="1674618443"><status state="up" reason="syn-ack" reason_ttl="125"/>
+<address addr="10.10.110.11" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_services:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="IIS Windows Server"><elem key="title">IIS Windows Server</elem>
+</script><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_services:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-cert" output="Subject: commonName=certenroll.cyber.local&#xa;Not valid before: 2022-01-04T16:12:44&#xa;Not valid after:  2024-01-04T16:12:44"><table key="subject">
+<elem key="commonName">certenroll.cyber.local</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Cyber-CA</elem>
+<elem key="domainComponent">cyber</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">BD5F683F77EA4738F5CC56965E50AA462B7E4818366F8E71A1784B4F9AC4E238FBB9C7393BB20BF4CF225F8751C16997D10CE8A71808C61EC56BB2220C6DF07047E2191C6316148E01BFDD6E6DA6EF30C8E72A22AC8B4FD6A5BDA4D91582A5E6226E8251DA8703E45DB1098710C75506DA84DC7302C8F2E4462CD0EED26C6F96EC6626008B95D1C5BAA10B28D58EC60B6EF2B277846FAC552F265D3281AC390B173E84B9C80777C4C08ABC46CB3B944DD4B03A04F24913FF24E2301EB7744180214CE308FEB0091C1B6B4F9518E15B1E0AB98FC30E6E77D92F24679A9904B466CE04C55767F42E33EB14ADA162FF64A999CC3C1E9AC75396E7C7108D7D83B039</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">1.3.6.1.4.1.311.21.7</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">1.3.6.1.4.1.311.21.10</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">1A:56:BF:EA:AB:D5:ED:B1:12:34:86:E3:90:A6:D2:D0:CA:FB:01:77</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">31:0A:A3:04:F0:87:B3:1E:B5:A2:A5:EA:A9:C2:E9:61:63:90:AC:22</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:ldap:///CN=Cyber-CA,CN=cydc,CN=CDP,CN=Public%20Key%20Services,CN=Services,CN=Configuration,DC=cyber,DC=local?certificateRevocationList?base?objectClass=cRLDistributionPoint</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">CA Issuers - URI:ldap:///CN=Cyber-CA,CN=AIA,CN=Public%20Key%20Services,CN=Services,CN=Configuration,DC=cyber,DC=local?cACertificate?base?objectClass=certificationAuthority</elem>
+</table>
+</table>
+<elem key="sig_algo">ecdsa-with-SHA256</elem>
+<table key="validity">
+<elem key="notBefore">2022-01-04T16:12:44</elem>
+<elem key="notAfter">2024-01-04T16:12:44</elem>
+</table>
+<elem key="md5">45a4f7c415ae718779a18c0fa259ee8c</elem>
+<elem key="sha1">ee6587625df362a33d9851358c34fbb46a545cfb</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIEcTCCBBegAwIBAgITJgAACPC+6u2GsMhFTQAAAAAI8DAKBggqhkjOPQQDAjBB&#xa;MRUwEwYKCZImiZPyLGQBGRYFbG9jYWwxFTATBgoJkiaJk/IsZAEZFgVjeWJlcjER&#xa;MA8GA1UEAxMIQ3liZXItQ0EwHhcNMjIwMTA0MTYxMjQ0WhcNMjQwMTA0MTYxMjQ0&#xa;WjAhMR8wHQYDVQQDExZjZXJ0ZW5yb2xsLmN5YmVyLmxvY2FsMIIBIjANBgkqhkiG&#xa;9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvV9oP3fqRzj1zFaWXlCqRit+SBg2b45xoXhL&#xa;T5rE4jj7ucc5O7IL9M8iX4dRwWmX0QzopxgIxh7Fa7IiDG3wcEfiGRxjFhSOAb/d&#xa;bm2m7zDI5yoirItP1qW9pNkVgqXmIm6CUdqHA+RdsQmHEMdVBtqE3HMCyPLkRizQ&#xa;7tJsb5bsZiYAi5XRxbqhCyjVjsYLbvKyd4RvrFUvJl0ygaw5Cxc+hLnIB3fEwIq8&#xa;Rss7lE3UsDoE8kkT/yTiMB63dEGAIUzjCP6wCRwba0+VGOFbHgq5j8MObnfZLyRn&#xa;mpkEtGbOBMVXZ/QuM+sUraFi/2Spmcw8HprHU5bnxxCNfYOwOQIDAQABo4ICQTCC&#xa;Aj0wNgYJKwYBBAGCNxUHBCkwJwYfKwYBBAGCNxUIh7uVNJ+RM4aJjTiE1p1mgdXE&#xa;I2kBIwIBZAIBATATBgNVHSUEDDAKBggrBgEFBQcDATAOBgNVHQ8BAf8EBAMCBaAw&#xa;GwYJKwYBBAGCNxUKBA4wDDAKBggrBgEFBQcDATAdBgNVHQ4EFgQUGla/6qvV7bES&#xa;NIbjkKbS0Mr7AXcwHwYDVR0jBBgwFoAUMQqjBPCHsx61oqXqqcLpYWOQrCIwgcMG&#xa;A1UdHwSBuzCBuDCBtaCBsqCBr4aBrGxkYXA6Ly8vQ049Q3liZXItQ0EsQ049Y3lk&#xa;YyxDTj1DRFAsQ049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMs&#xa;Q049Q29uZmlndXJhdGlvbixEQz1jeWJlcixEQz1sb2NhbD9jZXJ0aWZpY2F0ZVJl&#xa;dm9jYXRpb25MaXN0P2Jhc2U/b2JqZWN0Q2xhc3M9Y1JMRGlzdHJpYnV0aW9uUG9p&#xa;bnQwgboGCCsGAQUFBwEBBIGtMIGqMIGnBggrBgEFBQcwAoaBmmxkYXA6Ly8vQ049&#xa;Q3liZXItQ0EsQ049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNl&#xa;cnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9Y3liZXIsREM9bG9jYWw/Y0FDZXJ0&#xa;aWZpY2F0ZT9iYXNlP29iamVjdENsYXNzPWNlcnRpZmljYXRpb25BdXRob3JpdHkw&#xa;CgYIKoZIzj0EAwIDSAAwRQIhAP+UqGG1GbHIqYDVwB9cDDBEN2JZLh0He4Ht1OVW&#xa;r0JFAiBu2x/mJcRzuuuyzDFp6VPd7B6KpI7xWlFcMWFgnu6Nkw==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="tls-alpn" output="&#xa;  h2&#xa;  http/1.1"><elem>h2</elem>
+<elem>http/1.1</elem>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="ssl-date" output="2023-01-25T03:47:30+00:00; +8s from scanner time."><elem key="date">2023-01-25T03:47:30+00:00</elem>
+<elem key="delta">8.0</elem>
+</script><script id="http-title" output="IIS Windows Server"><elem key="title">IIS Windows Server</elem>
+</script></port>
+</ports>
+<hostscript><script id="clock-skew" output="7s"><elem key="count">1</elem>
+<elem key="mean">7</elem>
+<elem key="stddev">0</elem>
+<elem key="median">7</elem>
+</script></hostscript><times srtt="132753" rttvar="78662" to="447401"/>
+</host>
+<runstats><finished time="1674618443" timestr="Tue Jan 24 22:47:23 2023" summary="Nmap done at Tue Jan 24 22:47:23 2023; 1 IP address (1 host up) scanned in 23.55 seconds" elapsed="23.55" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

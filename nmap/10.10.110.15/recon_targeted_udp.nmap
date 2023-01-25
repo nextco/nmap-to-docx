@@ -1,0 +1,9 @@
+# Nmap 7.93 scan initiated Tue Jan 24 23:00:26 2023 as: nmap -p3391 -sUCV -n -oA 10.10.110.15/recon_targeted_udp 10.10.110.15
+Nmap scan report for 10.10.110.15
+Host is up (0.13s latency).
+
+PORT     STATE SERVICE VERSION
+3391/udp open  savant?
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jan 24 23:02:20 2023 -- 1 IP address (1 host up) scanned in 113.87 seconds
